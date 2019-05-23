@@ -1,6 +1,6 @@
 ;;; track-mode.el ---
 ;; Copyright (C) 2019 Free Software Foundation, Inc
-;; Author: Rocky Bernstein
+;; Author: Rocky Bernstein <rocky@gnu.org>
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -17,11 +17,12 @@
 
 ;; "node inspect" tracking a comint or eshell buffer.
 
+(require 'load-relative)
+(require 'realgud)
+
 (declare-function realgud:track-set-debugger 'realgud-track-mode)
 (declare-function realgud-track-mode-setup   'realgud-track-mode)
 (declare-function realgud:remove-ansi-schmutz 'realgud:utils)
-
-(require 'realgud)
 
 (require-relative-list '("core" "init") "realgud:node-inspect-")
 
